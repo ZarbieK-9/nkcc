@@ -18,77 +18,87 @@ function GoBack(){
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  const images = document.querySelectorAll('.jumbo-image');
+  const images = document.querySelectorAll('.hero-img img');
   let index = 0;
 
   function showImage() {
-    images.forEach(image => {
-      image.classList.remove('visible');
+    images.forEach(img => {
+      img.style.display = 'none';
     });
-    images[index].classList.add('visible');
     index = (index + 1) % images.length;
-    setTimeout(showImage, 2000); // Change slide duration here (in milliseconds)
+    images[index].style.display = 'block';
+    setTimeout(showImage, 3000); // Change slide duration here (in milliseconds)
   }
 
   showImage();
 });
 
 
+// JavaScript function to generate product items
+function generateProductItems(products) {
+  // Get the itemlist container
+  const itemlist = document.querySelector('.itemlist');
+
+  // Loop through the product data and generate product items
+  products.forEach((product, index) => {
+    const itemWrapper = document.createElement('div');
+    itemWrapper.classList.add('itemlist-item-wrapper');
+    // Set a unique onclick event for each product using its index
+    itemWrapper.setAttribute('onclick', `OpenProduct(${index + 1})`);
+
+    const productDetails = document.createElement('div');
+    productDetails.classList.add('product-details');
+
+    const productInfo = document.createElement('div');
+    productInfo.classList.add('product-info');
+
+    const productTitle = document.createElement('div');
+    productTitle.classList.add('product-title');
+    productTitle.textContent = product.title;
+
+    const productImage = document.createElement('div');
+    productImage.classList.add('product-image');
+    const img = document.createElement('img');
+    img.src = product.imageSrc;
+    productImage.appendChild(img);
+
+    productInfo.appendChild(productTitle);
+    productDetails.appendChild(productInfo);
+    productDetails.appendChild(productImage);
+    itemWrapper.appendChild(productDetails);
+
+    itemlist.appendChild(itemWrapper);
+  });
+}
+
+// Define product data array
+const products = [
+  { title: "HEllo", imageSrc: "./pictures/250 lph RO.jpg", description: "Description for Lounge Chair 1" },
+  { title: "SOFA", imageSrc: "https://via.placeholder.com/300", description: "Description for Sofa 1" },
+  { title: "LOUNGE CHAIR", imageSrc: "./pictures/250 lph RO.jpg", description: "Description for Lounge Chair 1" },
+  { title: "SOFA", imageSrc: "https://via.placeholder.com/300", description: "Description for Sofa 1" },
+  
+  // Add more product data as needed
+];
+
+// Call the function to generate product items with the products array
+generateProductItems(products);
 
 
-// var container = document.getElementById("container");
-// var left = document.getElementById("left");
-// var right = document.getElementById("right");
-// var items = Array.from(document.getElementsByClassName("item"));
 
-// items.map((item, index) => {
-// 	item.dataset.index = index;
-// });
+function OpenProduct(index) {
+  const product = products[index - 1]; // Adjust index to match array index
 
-// var debounce = function (callback, time) {
-// 	var timeout;
-// 	return function (event) {
-// 		clearTimeout(timeout);
-// 		timeout = setTimeout(() => {
-// 			callback.apply(this, arguments);
-// 		}, time);
-// 	};
-// };
+  // Update product details in the popup
+  const productTitle = document.querySelector('.product-title');
+  const productImage = document.querySelector('.product-image img');
+  const productDescription = document.querySelector('.product-description');
 
-// container.addEventListener(
-// 	"scroll",
-// 	debounce(function (event) {
-// 		console.log(event.target.scrollLeft);
-// 	}, 300)
-// );
+  productTitle.textContent = product.title;
+  productImage.src = product.imageSrc;
+  productDescription.textContent = product.description;
 
-// right.addEventListener("click", function (event) {
-// 	handleScrolling(true);
-// });
+  // Show the product popup
+  $(".lightbox-blanket").toggle();
+}
 
-// left.addEventListener("click", function (event) {
-// 	handleScrolling(false);
-// });
-
-// var handleScrolling = function (right = true) {
-// 	// get current active element
-// 	var active = document.getElementsByClassName("active")[0];
-
-// 	if (active) {
-// 		// find next scroll element
-// 		var nextActive = right
-// 			? active.nextElementSibling
-// 			: active.previousElementSibling;
-
-// 		// if there is next active sibling
-// 		if (nextActive) {
-// 			active.classList.remove("active");
-// 			nextActive.classList.add("active");
-// 			nextActive.scrollIntoView({
-// 				behavior: "smooth",
-// 				block: "start",
-// 				inline: "start"
-// 			});
-// 		}
-// 	}
-// };
