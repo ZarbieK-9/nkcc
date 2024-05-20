@@ -1,0 +1,57 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Product Card UI Design</title>
+    <link rel="stylesheet" type="text/css" href="product_card.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+   
+
+    <!-- Vendor Script -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="card" id="product_card1">
+      <div class="contain">
+        <!-- <button id="closeProductCard1" class="close-button" onclick="closeProductCard('productCard1')">Back to the Product Gallery</button> -->
+        <div class="imgBx">
+            <div class="image-gallery">
+              <button class="close-button" onclick="closeProductCard('product_card1')"><i class="fas fa-times"></i></button>
+          <img
+            src="../WEB IMAGES CONFIDENTIALSS/Robam Cooks/Robam-9B79/Robam-9B79.png"
+            alt="Cooking Hob/Top"
+          /> 
+        </div>
+    </div>
+        <div class="details">
+          <div class="content">
+            <h2>
+              Robam Cook Hob 9B79<br />
+              <span>Cook Hob / Cook Top</span>
+            </h2>
+            <p>
+              <h3>
+              Robam Cook Hob 9B79<br>
+              </h3>    
+          </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+  ></script>
+  <script src="product_card.js"></script>
+</html>

@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,800&display=swap');
+
+.card {
+    margin: 0;
+    padding: 0;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background: #000;
+}
+.contain {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 900px;
+    height: 600px;
+    background: #fff;
+    margin: 20px;
+}
+
+.contain .imgBx {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background: #212121;
+    transition: .3s linear;
+}
+
+
+.contain .image-gallery img {
+    position: relative;
+    width: 450px;
+    height: 450px;
+    margin-right: 10px;
+    
+}
+.content{
+    max-height: 100%; /* Add this line to set a maximum height */
+    overflow-y: auto;
+}
+
+.contain .details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 40px;
+}
+
+.contain .details h2{
+    margin: 0;
+    padding: 0;
+    font-size: 2.4em;
+    line-height: 1em;
+    color: #444;
+}
+
+.contain .details h2 span {
+    font-size: 0.4em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #999;
+}
+
+.contain .details p {
+    max-width: 85%;
+    margin-left: 15%;
+    color: #333;
+    font-size: 25px;
+    margin-bottom: 36px;
+    
+}
+
+
+
+
+/* responsive */
+@media (max-width: 1080px) {
+    .card{
+        height: auto;
+        overflow: scroll;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+    }
+
+    
+        .contain {
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+        }
+        .contain .imgBx {
+            /* padding: 40px; */
+            box-sizing: border-box;
+            width: 100% !important;
+            height: auto;
+            text-align: center;
+            overflow: hidden;
+        }
+        .contain .image-gallery img {
+            left: initial;
+            max-width: 100%;
+            
+        }
+        .details {
+            width: 100% !important;
+            height: auto;
+            padding: 20px;
+        }
+        .contain .details p {
+            margin-left: 0;
+            max-width: 100%;
+        }
+    }
+      
+
+
+
+    .image-gallery {
+        display: flex;
+        overflow-x: auto;
+        width: 100%; /* Ensure it takes the full width of the container */
+      }
+      
+      .close-button {
+        position: absolute;
+        top: 10px; /* Adjust the top position as needed */
+        right: 10px; /* Adjust the right position as needed */
+        background-color: #100909; /* Button background color */
+        border: 1px solid #000; /* Button border */
+        padding: 5px 10px;
+        cursor: pointer;
+        z-index: 1; /* Ensure it's above the image */
+      }
+
+    /* Add a CSS class to create the background blur effect */
+.blurry-background {
+    backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the background color and opacity as needed */
+  }
+  
