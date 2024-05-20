@@ -73,10 +73,8 @@ function generateProductItems(products) {
 
 // Define product data array
 const products = [
-  { title: "HEllo", imageSrc: "./pictures/250 lph RO.jpg", description: "Description for Lounge Chair 1" },
-  { title: "SOFA", imageSrc: "https://via.placeholder.com/300", description: "Description for Sofa 1" },
-  { title: "LOUNGE CHAIR", imageSrc: "./pictures/250 lph RO.jpg", description: "Description for Lounge Chair 1" },
-  { title: "SOFA", imageSrc: "https://via.placeholder.com/300", description: "Description for Sofa 1" },
+  { title: "Water Treatment Plant", imageSrc: "./pictures/250 lph RO.jpg", description: "" },
+  { title: "Water Treatment Plant", imageSrc: "./pictures/products.jpg", description: "" },
   
   // Add more product data as needed
 ];
