@@ -433,6 +433,7 @@ ul {
   display: flex;
   flex-wrap: wrap;
   padding: 3px 10px;
+  justify-content: space-around;
 }
 .itemlist {
   display: flex;
@@ -724,9 +725,22 @@ h2 {
   transform: scale(0.95, 1);
   font: clamp(30px, 6vw, 60px) Arimo, sans-serif;
 }
-.hero-img img {
-  display: none;
+.hero-img {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* This will add spacing between images */
 }
+
+.hero-img img {
+  max-width: 100%;
+  height: auto;
+  margin: 10px; /* Adjust margin as needed */
+  border: 1px solid #ddd; /* Optional: adds a border around images */
+  border-radius: 8px; /* Optional: adds rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+}
+
 .hero-img img:first-child {
   display: block;
 }
@@ -1110,7 +1124,7 @@ img {
   .footer-bottom .copyright {
     align-items: center;
     display: flex;
-    margin-left: 3px;
+    margin-left: 30px;
     margin-right: 3px;
 }
  
