@@ -413,16 +413,32 @@ ul {
   justify-content: space-between;
   flex-direction: row;
 }
-.footer-items {
+.footer-items1 {
   box-sizing: border-box;
   color: #fff;
   padding: 10px 20px;
-  width: 25%;
+  width: 70%;
+  text-align: justify;
 }
-.footer-items h1 {
+.footer-items2 {
+  box-sizing: border-box;
+  color: #fff;
+  padding: 10px 20px;
+  width: 30%;
+  text-align: justify;
+}
+.footer-items1 h1 {
+  color: #fff;
+}.footer-items2 h1 {
   color: #fff;
 }
-.footer-items p {
+.footer-items1 p {
+  color: #fff;
+  font-size: 16px;
+  line-height: 25px;
+  text-align: justify;
+}
+.footer-items2 p {
   color: #fff;
   font-size: 16px;
   line-height: 25px;
@@ -433,7 +449,7 @@ ul {
   display: flex;
   flex-wrap: wrap;
   padding: 3px 10px;
-  justify-content: space-around;
+  justify-content:space-around;
 }
 .itemlist {
   display: flex;
@@ -730,16 +746,14 @@ h2 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px; /* This will add spacing between images */
+  width: 80%;
+  height: 50%;
 }
+.hero-img img{
+  margin-top: 50px;
+  width: 70%;
+  height: 50%;
 
-.hero-img img {
-width: 50%;
-height: 50%;
-
-
-  border: 1px solid #ddd; /* Optional: adds a border around images */
-  border-radius: 8px; /* Optional: adds rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
 }
 
 .hero-img img:first-child {
@@ -930,7 +944,6 @@ img{
   }
   /* Adjusting margin and padding for mobile */
   #about .text p {
-    margin-right: 0;
     text-align: center;
   }
   /* Background color change for mobile */
@@ -1084,10 +1097,14 @@ img{
   /* Adjusting padding for mobile */
   .hero {
     padding: 0;
+    display: flex;
+    flex-direction: column;
   }
   /* Adjusting margin for mobile */
   .hero-img {
     margin-top: 20px;
+    width: 80%;
+    height: 50%;
   }
   #contact-us {
     padding: 10px;
