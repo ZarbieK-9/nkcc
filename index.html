@@ -253,15 +253,23 @@
         </div>
       </div>
       <div class="contact-form-wrapper">
-        <form method="post" netlify>
+        <form name="contact" method="POST" data-netlify="true">
+          <input type="hidden" name="subject" 
+          value="Sales inquiry from mysitename.netlify.app" />
           <div class="form-item">
-            <input type="text" name="sender" id="sender" placeholder="Name" required="" />
+            <p>
+              <label>Your Name: <input type="text" name="name" /></label>
+            </p>
           </div>
           <div class="form-item">
-            <input type="email" name="email" id="email" placeholder="Email" required="" />
+            <p>
+              <label>Your Email: <input type="email" name="email" /></label>
+            </p>
           </div>
           <div class="form-item">
-            <textarea name="message" id="message" placeholder="Message" required=""></textarea>
+            <p>
+              <label>Message: <textarea name="message"></textarea></label>
+            </p>
           </div>
           <button type="submit" class="submit-btn" onclick="sendEmail()">
             Send
