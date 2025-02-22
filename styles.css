@@ -72,21 +72,18 @@
   background-color: #e9feff;
 }
 #header-img {
-  height: 60px;
+  height: 50px;
   margin-top: 0;
-  width: 120px;
+aspect-ratio: 2/1;
   z-index: 2;
 }
 .company-info {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: auto;
+  height: max-content;
 }
-.brand-logo img {
-  width: 100px;
-  height: auto;
-}
+
 .contact-details {
   display: flex;
   flex-direction: row;
@@ -228,20 +225,23 @@
 }
 .menu li {
   color: #000;
-  margin-top: 28px;
+  margin-top: 25px;
+ 
+  
 }
 .menu li a {
   color: #000;
   font-size: 1.2em;
   margin: 0 0.5em;
   padding: 0.5em;
+  
 }
 .navbar {
   background-color: #3b9f65;
   display: flex;
   height: auto;
-  justify-content: space-around;
-  width: auto
+  justify-content: space-between;
+  
 }
 .get-quote-btn {
   background-color: #f8f9fa;
@@ -255,6 +255,7 @@
   color: #212529;
   font-weight: 700;
   text-align: center;
+  margin-right: 90px;
 }
 .get-quote-btn:hover {
   background-color: #e9ecef;
@@ -406,7 +407,7 @@ ul {
   border: 0;
   color: #ff9800;
   height: 3px;
-  width: 40px;
+  width: 100px;
 }
 .footer-bottom {
   width: 100%;
@@ -426,7 +427,7 @@ ul {
 .footer-items2 {
   box-sizing: border-box;
   color: #fff;
-  padding: 10px 20px;
+  padding: 30px 150px;
   width: 40%;
   text-align: justify;
 }
@@ -571,7 +572,7 @@ ul li {
 }
 .brand-logo {
   float: left;
-  margin-left: 80px;
+  margin-right: 100px;
   margin-top: 5px;
 }
 .menu {
@@ -579,7 +580,8 @@ ul li {
   justify-content: flex-start;
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin-left: 160px;
+  
 }
 .menu li {
   display: inline;
@@ -684,7 +686,7 @@ ul li {
   font-weight: 600;
   margin: 0;
   padding: 20px 0;
-  width: auto;
+  width: 100%;
   flex-wrap: nowrap;
   justify-content: space-around;
   flex-direction: column;
@@ -696,11 +698,15 @@ ul li {
   border: 0;
   color: #ff9800;
   height: 5px;
-  width: 130px;
+  width: 120px;
 }
 .form-item {
   position: relative;
 }
+form[name="contact"] label {
+  color: #f4f2ef; /* Change this to your desired color */
+}
+
 .link {
   cursor: pointer;
   font-size: 35px;
@@ -713,13 +719,30 @@ ul li {
 }
 .fab {
   font-weight: 400;
-  color: #000;
+  color: #121212;
 }
 .fa,
 .fas {
   font-weight: 900;
-  color: #000;
+  color: #160f0f;
 }
+
+/* Company info icons (Office Hours, Mail, Call us) */
+.company-info .icon-container i {
+  color: #111010; /* Adjust this color as needed */
+}
+
+/* Social links icons */
+.links .link i {
+  color: #e4dcdc; /* Adjust this color as needed */
+}
+
+/* Optional: Change color on hover for social links */
+.links .link i:hover {
+  color: #5d4c3e;
+}
+
+
 .submit-btn {
   background-color: #fd917e;
   border: none;
